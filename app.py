@@ -19,9 +19,9 @@ def start_survey():
   session[RESPONSES] = []
   return redirect("/questions/0")
 
-@app.route("/responses", methods=["POST"])
+@app.route("/response", methods=["POST"])
 def survey_response():
-  choice = request.form['response']
+  choice = request.form['responses']
 
   responses = session[RESPONSES]
   responses.append(choice)
