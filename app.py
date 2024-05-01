@@ -18,7 +18,6 @@ def start_page():
 def start_survey():
     session[RESPONSES] = []
     session.modified = True
-    print("Session at start:", session[RESPONSES])  # Debug print
     return redirect("/questions/0")
 
 @app.route("/response", methods=["POST"])
